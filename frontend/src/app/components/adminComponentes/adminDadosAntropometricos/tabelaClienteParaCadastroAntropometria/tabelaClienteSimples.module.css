@@ -1,0 +1,124 @@
+/* Container principal do modal */
+.containerCadastrarEditarCliente {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* Input de pesquisa */
+  .campoPesquisaTabelas {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .campoPesquisaTabelas input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+  
+  .campoPesquisaTabelas input:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  /* Tabela de clientes */
+  .tabelaClientes {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabelaClientes th,
+  .tabelaClientes td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tabelaClientes tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  /* Linha selecionada */
+  .selecionado {
+    background-color: #e0f2e9;
+  }
+  
+  /* Botão de confirmar (padrão do modal, se tiver) */
+  .botaoMenu {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+  
+  .botaoMenu button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .botaoMenu button:hover {
+    background-color: #45a049;
+  }
+  
+  
+/* ------- PAGINAÇÃO ------- */
+
+.pagination {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #3d9441;
+}
+
+.pagination button:disabled {
+  background: #9c9c9c;
+}
+
+.inputPagina {
+  width: 40px;
+  padding: 3px;
+  text-align: center;
+  font-size: 0.8rem;
+  border: 1px solid #b7d8c2;
+  border-radius: 4px;
+  background: #f4fff7;
+  transition: 0.2s;
+}
+
+.inputPagina:hover {
+  border-color: #7acb8d;
+  background: #ebffee;
+}
+

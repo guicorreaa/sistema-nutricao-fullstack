@@ -1,0 +1,104 @@
+.miniCard {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 220px;
+  /* Borda padrão sutil */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.miniCard:hover {
+  transform: translateY(-4px);
+  background: rgba(15, 23, 42, 0.8);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Classes de Status com Brilho Suave (Glow) */
+.borderRisk { 
+  border-left: 4px solid #f43f5e;
+  background: linear-gradient(90deg, rgba(244, 63, 94, 0.05) 0%, transparent 50%);
+}
+
+.borderModerate { 
+  border-left: 4px solid #f59e0b;
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+}
+
+.borderSafe { 
+  border-left: 4px solid #10b981;
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 2; /* Garante que fique acima do gráfico */
+}
+
+.iconWrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.miniCard:hover .iconWrapper {
+  transform: scale(1.1);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 10px;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.valueGroup {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums; /* Mantém os números alinhados */
+}
+
+.statusText {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sparkline {
+  position: absolute;
+  bottom: -5px; /* Levemente para fora para a linha parecer flutuar */
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+  mask-image: linear-gradient(to right, rgba(0,0,0,0.1), black, rgba(0,0,0,0.1));
+}

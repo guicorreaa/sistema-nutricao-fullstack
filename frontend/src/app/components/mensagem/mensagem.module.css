@@ -1,0 +1,61 @@
+.overlay {
+  position: fixed;
+  inset: 0; /* equivalente a top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* garante que fique sobre todos os elementos */
+}
+
+.modal {
+  background: #fff;
+  padding: 35px;
+  width: 90%;
+  max-width: 350px; /* evita ficar muito grande em telas grandes */
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: aparecer 0.25s ease-out forwards;
+  text-align: center;
+}
+
+.texto {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 18px;
+  word-break: break-word;
+  margin-top: 30px;
+}
+
+.botao {
+  width: 30%;
+  padding: 12px 0;
+  background: #45a049;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.botao:hover {
+  background: #45a119;
+}
+
+.imagem {
+  width: 120px;
+  height: auto;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

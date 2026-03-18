@@ -1,0 +1,15 @@
+.titulo {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #2e7d32;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  .titulo {
+    font-size: 1.5rem;
+  }
+    
+}

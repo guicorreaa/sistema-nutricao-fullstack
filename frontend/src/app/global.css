@@ -1,0 +1,21 @@
+/* globals.css */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* background-image: url("./images/background_principal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #e8f5e9, #c8e6c9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}

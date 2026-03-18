@@ -1,0 +1,100 @@
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  border: 1px solid #f0f0f0;
+}
+
+/* Container dos badges superiores */
+.displayResults {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.resultBadge {
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deficitBadge {
+  background-color: #fef2f2; /* Vermelho muito claro */
+  border: 1px solid #fee2e2;
+  color: #991b1b;
+}
+
+.superavitBadge {
+  background-color: #f0fdf4; /* Verde muito claro */
+  border: 1px solid #dcfce7;
+  color: #166534;
+}
+
+.iconArea {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.valueArea {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.valueArea strong {
+  font-size: 1.5rem;
+}
+
+.valueArea small {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* Grid de Inputs */
+.inputGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field input:focus {
+  border-color: #3b82f6;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px dashed #e2e8f0;
+  margin: 10px 0;
+}
+
+.baseInfo {
+  margin-top: 15px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-align: center;
+}

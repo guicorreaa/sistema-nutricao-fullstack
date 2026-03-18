@@ -1,0 +1,148 @@
+.botaoCadastrar {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.botaoAdicionarAlimento {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.2s;
+    width: 40%;
+    margin: 15px;
+}
+
+.botaoAdicionarAlimento:hover {
+    background: #209224;
+}
+
+.botaoAdicionarAlimentoOpcional {
+  background: #1a69b3;
+}
+
+.botaoAdicionarAlimentoOpcional:hover {
+  background: #047ff3;
+}
+
+.botaoVoltar {
+  background: #f4fbf6;          /* verde bem clarinho */
+  color: #2e7d32;
+  border: 1px solid #d9efe0;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Hover */
+.botaoVoltar:hover {
+  background: #e9f7ee;
+  border-color: #bfe3cb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Clique */
+.botaoVoltar:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+/* Foco (acessibilidade) */
+.botaoVoltar:focus-visible {
+  outline: 2px solid #a5d6b3;
+  outline-offset: 2px;
+}
+
+/* Contador caracteres */
+.contadorCaracteres {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #666;
+  align-self: flex-end;
+}
+
+.contadorCaracteresMax {
+  color: #c0392b;
+}
+
+
+/* Área geral */
+.areaAdicionar {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+/* Texto do alimento */
+.alimentoSelecionado {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* Campo observação */
+.campoObservacao {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campoObservacao label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.campoObservacao textarea {
+  resize: none;
+  min-height: 80px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+.campoObservacao textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Linha inferior */
+.linhaInferiorObservacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dicaObservacao {
+  font-size: 11px;
+  color: #777;
+}
+
+/* Contador */
+.contadorCaracteres {
+  font-size: 12px;
+  color: #555;
+}
+
+.contadorCaracteresMax {
+  font-size: 12px;
+  color: #c0392b;
+  font-weight: 600;
+}

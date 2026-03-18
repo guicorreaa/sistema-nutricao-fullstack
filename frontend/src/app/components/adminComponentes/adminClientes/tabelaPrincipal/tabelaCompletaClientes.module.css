@@ -1,0 +1,113 @@
+.tabelaClientesContainer {
+  width: 100%;
+  max-height: 400px;
+  overflow-x: auto; /* 🔥 resolve o vazamento horizontal */
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper extra pra garantir */
+.wrapperTabela {
+  min-width: 700px; /* controla quando aparece scroll */
+}
+
+/* Tabela */
+.tabelaClientes {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho fixo */
+.tabelaClientes thead {
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Células */
+.tabelaClientes th,
+.tabelaClientes td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* 🔥 impede quebra bizarra */
+}
+
+/* Linhas */
+.tabelaClientes tbody tr {
+  transition: background-color 0.3s;
+}
+
+.tabelaClientes tbody tr:hover {
+  background-color: #c8e6c9;
+  cursor: pointer;
+}
+
+/* Linha selecionada */
+.selecionado {
+  background-color: #a5cfa7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .wrapperTabela {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapperTabela {
+    min-width: 520px;
+  }
+}
+
+
+/* ------- PAGINAÇÃO ------- */
+
+.pagination {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #3d9441;
+}
+
+.pagination button:disabled {
+  background: #9c9c9c;
+}
+
+.inputPagina {
+  width: 40px;
+  padding: 3px;
+  text-align: center;
+  font-size: 0.8rem;
+  border: 1px solid #b7d8c2;
+  border-radius: 4px;
+  background: #f4fff7;
+  transition: 0.2s;
+}
+
+.inputPagina:hover {
+  border-color: #7acb8d;
+  background: #ebffee;
+}
+

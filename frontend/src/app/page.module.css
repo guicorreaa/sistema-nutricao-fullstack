@@ -1,0 +1,580 @@
+/* =======================================
+   🌿 Estilo Nutrição - Visual leve, moderno e feminino
+   ======================================= */
+
+/* ===== Cores e base ===== */
+.appNutri {
+  --verde-claro: #b7e4c7;
+  --verde-medio: #74c69d;
+  --verde-escuro: #2d6a4f;
+  --branco: #ffffff;
+  --cinza-texto: #444;
+  --cinza-claro: #f9f9f9;
+  --sombra-suave: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+  font-family: "Poppins", sans-serif;
+  color: var(--cinza-texto);
+  background-color: var(--cinza-claro);
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ===== Container geral ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Seções ===== */
+.section {
+  padding: 80px 0;
+}
+
+.h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--verde-escuro);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--verde-medio);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 4px;
+}
+
+/* ===== Header ===== */
+.header {
+  background-color: var(--branco);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--verde-escuro);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+} */
+
+/* .logo:hover {
+  color: var(--verde-medio);
+} */
+
+.logo {
+  width: 300px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  filter: brightness(1.2);
+}
+
+.navLinks a {
+  color: var(--cinza-texto);
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--verde-medio);
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.active {
+  color: var(--verde-escuro);
+  font-weight: 600;
+}
+
+/* Quando o link estiver ativo */
+.navLinks a.active::after {
+  width: 100%;
+}
+
+/* Também muda a cor quando ativo */
+.navLinks a.active {
+  color: #00c3a0;
+}
+
+/* ===== Hero ===== */
+.hero {
+  /* background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1400&q=80") no-repeat center/cover; */
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("./images/hero.webp") no-repeat center/cover;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  padding: 60px 40px;
+  border-radius: 25px;
+  box-shadow: var(--sombra-suave);
+}
+
+.heroContent h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--verde-escuro);
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.heroContent p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+
+.btnCta {
+  background-color: var(--verde-escuro);
+  color: var(--branco);
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btnCta:hover {
+  background-color: var(--verde-medio);
+  transform: translateY(-3px);
+}
+
+/* ===== Minha História ===== */
+.historiaContent {
+  display: flex;
+  gap: 50px;
+  background-color: var(--branco);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: var(--sombra-suave);
+  align-items: center;
+}
+
+.historiaImg img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--verde-medio);
+  box-shadow: 0 0 0 10px rgba(116, 198, 157, 0.15);
+}
+
+.historiaText h3 {
+  font-size: 1.8rem;
+  color: var(--verde-escuro);
+  margin-bottom: 10px;  
+}
+
+.historiaText p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.link {
+  color: var(--verde-medio);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Depoimentos ===== */
+.depoimentosGrid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.depoimentoCard {
+  background-color: var(--branco);
+  border-radius: 20px;
+  padding: 30px;
+  width: 250px;
+  text-align: center;
+  box-shadow: var(--sombra-suave);
+  font-style: italic;
+}
+
+/* ===== Dúvidas ===== */
+.content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--branco);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: var(--sombra-suave);
+}
+
+.minhaConsultaText h3 {
+  color: var(--verde-escuro);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.minhaConsultaText p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.imagemMinhaConsulta img {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 4px solid var(--verde-medio);
+  box-shadow: 0 0 0 10px rgba(116, 198, 157, 0.15);
+}
+
+/* ===== Contato ===== */
+.contentContato {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  background-color: var(--branco);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: var(--sombra-suave);
+}
+
+.btnContato {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: var(--branco);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contatoWpp .btnContato {
+  background-color: #25d366;
+}
+
+.contatoWpp .btnContato:hover {
+  background-color: #1ebe5b;
+  transform: translateY(-2px);
+}
+
+.contatoEmail .btnContato {
+  background-color: #0078d7;
+}
+
+.contatoEmail .btnContato:hover {
+  background-color: #0063b1;
+  transform: translateY(-2px);
+}
+
+/* ===== Rodapé ===== */
+.footer {
+  background: linear-gradient(180deg, var(--verde-escuro) 0%, #013220 100%);
+  color: var(--branco);
+  padding: 50px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.containerFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* deixa o conjunto centralizado */
+  gap: 0; /* sem gap, pra gente controlar o espaçamento manual */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.instagram,
+.contatoFooter {
+  flex: 1; /* faz os dois lados ocuparem o mesmo espaço */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.minhaRedeSocial h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.instagram a {
+  color: var(--branco);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.instagram a:hover {
+  transform: scale(1.05);
+  color: #c3f0d2;
+}
+
+.logoInstagram {
+  width: 30px;
+  height: auto;
+  transition: 0.3s ease;
+}
+
+.instagram a:hover .logoInstagram {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* --- CONTATO --- */
+
+.contatoFooter h3 {
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contatoFooter div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.contatoFooter a {
+  color: var(--branco);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contatoFooter a:hover {
+  color: #c3f0d2;
+  transform: translateY(-2px);
+}
+
+.logoWpp,
+.logoEmail {
+  width: 26px;
+  height: auto;
+  transition: 0.3s ease;
+}
+
+.contatoFooter div:hover img {
+  transform: scale(1.1);
+}
+
+/* --- FOOTER SECUNDARIO --- */
+.footerCreditos {
+  background-color: #fff; /* fundo branco para ficar chamativo */
+  color: #2d6a4f; /* verde escuro para combinar com o tema */
+  text-align: center;
+  /* padding: 8px 0; */
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid #c3f0d2; /* separação discreta */
+}
+
+.footerCreditos span {
+  font-weight: 600;
+}
+
+/* Espaçador */
+.br {
+  width: 2px;
+  background-color: #c3f0d2; /* cor combinando com o tema */
+  height: 100px; /* ajusta pra altura desejada */
+  margin: 0 40px;
+}
+
+/* ==== MENU HAMBURGUER ==== */
+.hamburger {
+  display: none; /* escondido por padrão */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 2000; /* garante que fica acima do resto */
+  position: relative; /* ajuda a não ser coberto */
+  
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--verde-escuro); /* cor das linhas */
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* quando o menu está aberto */
+.activeHamburger span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.activeHamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.activeHamburger span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* MENU MOBILE */
+.navLinks.showNav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  gap: 25px;
+}
+
+/* FREEPIK LINK */
+.Freepik {
+  color: var(--verde-escuro);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+  .historiaContent,
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroContent {
+    padding: 40px 25px;
+  }
+
+  .heroContent h1 {
+    font-size: 2.2rem;
+  }
+
+  
+  .hamburger {
+    display: flex; /* mostra o botão quando a tela for menor que 768px */
+  }
+
+  .navLinks {
+    display: none; /* esconde o menu normal */
+  }
+}
+
+@media (max-width: 768px) {
+  .containerFooter {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer {
+    padding: 50px 15px;
+  }
+
+  .instagram a,
+  .contatoFooter a {
+    font-size: 1rem;
+  }
+
+  .contatoFooter h3,
+  .instagram h3 {
+    font-size: 1.3rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .h2 {
+    font-size: 1.8rem;
+  }
+
+  .navLinks a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .btnCta {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar {
+    height: 80px;
+    /* justify-content: center; */
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  /* .navLinks a {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  } */
+}

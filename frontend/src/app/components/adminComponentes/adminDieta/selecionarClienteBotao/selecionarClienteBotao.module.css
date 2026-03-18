@@ -1,0 +1,82 @@
+/* Container centralizado e discreto */
+.divSelecionarCliente {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Card compacto e moderno */
+.card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 320px; /* Reduzido de 450px */
+  padding: 18px 24px; /* Padding mais horizontal, estilo botão */
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  /* Borda sutil e sombra leve */
+  border: 1.5px solid #edf2f7;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Título menor e mais direto */
+.card h2 {
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+/* Descrição secundária */
+.card p {
+  font-size: 0.85rem;
+  color: #718096;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Feedback visual de Hover */
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #81c99a;
+  background-color: #f9fffb; /* Um leve toque de verde no fundo */
+  box-shadow: 0 10px 15px -3px rgba(129, 201, 154, 0.15);
+}
+
+/* A barrinha lateral indicadora */
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #81c99a;
+  transform: scaleY(0.4); /* Começa pequena */
+  transition: transform 0.3s ease;
+  border-radius: 0 4px 4px 0;
+}
+
+.card:hover::before {
+  transform: scaleY(1); /* Cresce no hover */
+}
+
+/* Efeito de clique */
+.card:active {
+  transform: scale(0.97);
+  background-color: #f0fdf4;
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%; /* Ocupa a largura disponível no celular */
+  }
+}

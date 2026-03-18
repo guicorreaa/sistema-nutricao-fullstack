@@ -1,0 +1,146 @@
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.campos,
+.camposMenores {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.camposMenores {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+}
+
+.campos label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.campos input,
+.campos select,
+.campos textarea {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f9fbfc;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.campos textarea {
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.campos input:focus,
+.campos select:focus,
+.campos textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.2);
+  outline: none;
+}
+
+/* Botões de ação */
+.botaoCadastrarFechar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btnCadastrar,
+.btnEditar {
+  background: #4caf50;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 150px;
+  height: 40px;
+}
+
+.btnCadastrar:hover,
+.btnEditar:hover {
+  background: #43a047;
+}
+
+.btnFechar {
+  background: #f44336;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 150px;
+  height: 40px;
+}
+
+.btnFechar:hover {
+  background: #d32f2f;
+}
+
+/* ComboBox Status da Consulta */
+.cancelamentoConsulta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cancelamentoConsulta label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.cancelamentoConsulta select {
+  height: 35px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f9fbfc;
+  transition: border-color 0.3s ease;
+}
+
+.cancelamentoConsulta select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Responsividade básica */
+@media (max-width: 500px) {
+  .botaoCadastrarFechar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btnCadastrar,
+  .btnEditar,
+  .btnFechar {
+    width: 100%;
+  }
+}

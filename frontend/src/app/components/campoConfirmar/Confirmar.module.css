@@ -1,0 +1,43 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .caixa {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .confirmar {
+    background: #4caf50;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cancelar {
+    background: #bbb;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  

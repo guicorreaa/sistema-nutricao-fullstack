@@ -1,0 +1,71 @@
+/* Container principal do painel */
+.container {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 40px auto 0 auto;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Área dos botões abaixo da tabela */
+.botaoMenu {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+
+/* Botões padrão */
+.botaoMenu button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover dos botões */
+.botaoMenu button:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+}
+
+/* Botão desabilitado (caso use depois) */
+.botaoMenu button:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsividade */
+@media (max-width: 1070px) {
+  .container {
+    max-width: 80vw;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .botaoMenu {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .botaoMenu button {
+    width: 100%;
+  }
+}

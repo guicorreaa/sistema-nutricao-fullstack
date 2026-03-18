@@ -1,0 +1,50 @@
+.containerFormCadastro {
+  /* display: flex; */
+  /* flex-direction: column; */
+  gap: 30px;
+}
+
+/* Container do botão */
+.botoesCadastro {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Botão principal */
+.botoesCadastro button {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+  color: white;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover */
+.botoesCadastro button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Clique */
+.botoesCadastro button:active {
+  transform: translateY(0px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estado desabilitado (se quiser usar depois) */
+.botoesCadastro button:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+  box-shadow: none;
+}

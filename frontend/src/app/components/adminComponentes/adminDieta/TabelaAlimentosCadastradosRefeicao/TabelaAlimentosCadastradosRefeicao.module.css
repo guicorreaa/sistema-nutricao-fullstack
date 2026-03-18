@@ -1,0 +1,172 @@
+.containerTabela {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.espacamento {
+  margin: 10px;
+}
+
+/* ------- TABELA ------- */
+
+.tabelaClientes {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+
+  border: 1px solid #d0ead8;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tabelaClientes th {
+  background: #e1f5e7;
+  color: #2e6b3f;
+  padding: 6px;
+  border-bottom: 2px solid #c8e9d3;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tabelaClientes td {
+  padding: 4px 6px;
+  border-bottom: 1px solid #e5f3e9;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Hover */
+.tabelaClientes tbody tr {
+  transition: 0.15s;
+}
+
+.tabelaClientes tbody tr:hover {
+  background: #f1fff4;
+  cursor: pointer;
+}
+
+.linhaSelecionada {
+  background: #d8f5dd !important;
+  border-left: 4px solid #4caf50;
+  color: #1e750b;
+}
+
+.tabelaClientes tbody tr:hover:not(.linhaSelecionada) {
+  background: #f1fff4;
+}
+
+/* Centralizar números */
+.tabelaClientes td:nth-child(3),
+.tabelaClientes td:nth-child(4),
+.tabelaClientes td:nth-child(5),
+.tabelaClientes td:nth-child(6) {
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #2e7d32;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Tabela total */
+.tabelaTotais {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+
+  border: 1px solid #d0ead8;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+/* Cabeçalho */
+.tabelaTotais th {
+  background: #e1f5e7;
+  color: #2e6b3f;
+  padding: 8px 6px;
+  border-bottom: 2px solid #c8e9d3;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.containerGrafico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Células */
+.tabelaTotais td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #e5f3e9;
+  text-align: center;   /* ⭐ números centralizados */
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+/* Destaque suave para os totais */
+.tabelaTotais tbody tr {
+  background: #f6fffa;
+}
+
+/* Opcional: deixa os números mais fortes */
+.tabelaTotais td {
+  color: #1f6b3a;
+}
+
+/* Botão remover */
+.botaoRemover {
+  background: #e53935;          /* Vermelho forte */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  margin-top: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  transition: 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Hover */
+.botaoRemover:hover {
+  background: #c62828;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Clique */
+.botaoRemover:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Desabilitado */
+.botaoRemover:disabled {
+  background: #ef9a9a;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+/* Alimento Opcional */
+.alimentoOpcional {
+  font-style: italic;
+  background-color: #cce5fd;
+}

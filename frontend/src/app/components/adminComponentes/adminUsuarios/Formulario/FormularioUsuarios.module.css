@@ -1,0 +1,113 @@
+/* Container do formulário de edição/cadastro */
+.containerEditar,
+.containerCadastrar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 50vw;
+  margin: 20px auto;
+}
+
+/* Campos do formulário */
+.email,
+.telefone,
+.status {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email label,
+.telefone label,
+.status label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.email input,
+.telefone input,
+.status select {
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9fbfc;
+  transition: border-color 0.3s ease;
+}
+
+.email input:focus,
+.telefone input:focus,
+.status select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Botões */
+.editarBotaoSalvar,
+.btnCadastrar {
+  width: 40%;
+  height: 45px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.editarBotaoSalvar,
+.btnCadastrar {
+  background-color: #63bd67;
+}
+
+.editarBotaoSalvar:hover,
+.btnCadastrar:hover {
+  background-color: #45a049;
+}
+
+.salvar,
+.botaoCadastrar {
+  display: flex;
+  justify-content: center;
+}
+
+/* Botão carregando */
+.btnCarregando {
+  background-color: gray; /* botão cinza */
+  cursor: not-allowed;    /* cursor desativado */
+  opacity: 0.7;           /* leve transparência */
+}
+
+/* Título informativo */
+.tituloInformativo {
+  margin: 0;
+}
+
+.botaoDesativado {
+  background-color: #ccc; /* cinza */
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .containerEditar,
+  .containerCadastrar {
+    max-width: 80vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerEditar,
+  .containerCadastrar {
+    max-width: 90vw;
+  }
+}

@@ -1,0 +1,28 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.listaDietas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  max-width: 360px;
+  gap: 10px;
+}
+
+.botaoPossuiDietas {
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+}
+
+.botaoPossuiDietas:hover {
+  background-color: #45a039;
+  cursor: pointer;
+}

@@ -1,0 +1,112 @@
+/* Container da tabela */
+.tabelaClientesContainer {
+  width: 100%;
+  max-height: 55vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Ícone da lupa */
+.iconeLupa {
+  position: absolute;
+  left: 10px;
+  font-size: 15px;
+  color: #4caf50;
+  pointer-events: none;
+}
+
+/* Tabela */
+.tabelaClientes {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabelaClientes thead {
+  background: linear-gradient(90deg, #4caf50, #66bb6a);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.tabelaClientes th,
+.tabelaClientes td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  white-space: nowrap;
+}
+
+/* Linhas */
+.tabelaClientes tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.tabelaClientes tbody tr:hover {
+  background-color: #e8f5e9;
+  cursor: pointer;
+}
+
+/* Linha selecionada */
+.selecionado {
+  background-color: #c8e6c9 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tabelaClientes {
+    font-size: 0.85rem;
+  }
+
+  .campoPesquisaTabelas button {
+    padding: 10px;
+  }
+}
+
+
+/* ------- PAGINAÇÃO ------- */
+
+.pagination {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #3d9441;
+}
+
+.pagination button:disabled {
+  background: #9c9c9c;
+}
+
+.inputPagina {
+  width: 40px;
+  padding: 3px;
+  text-align: center;
+  font-size: 0.8rem;
+  border: 1px solid #b7d8c2;
+  border-radius: 4px;
+  background: #f4fff7;
+  transition: 0.2s;
+}
+
+.inputPagina:hover {
+  border-color: #7acb8d;
+  background: #ebffee;
+}
+

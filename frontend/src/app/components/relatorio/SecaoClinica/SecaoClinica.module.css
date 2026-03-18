@@ -1,0 +1,62 @@
+.section {
+    background: #fff;
+    border: 1px solid #f1f5f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.sectionTitle {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.clinicGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.statusItem {
+    padding: 0.75rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.statusItem span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.statusItem strong {
+    font-size: 1rem;
+}
+
+.antecedentes {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
+
+.antecedentes label {
+    font-weight: bold;
+    color: #475569;
+    display: block;
+}
+
+.antecedentes p {
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+.safe { background: #f0fdf4; color: #16a34a; }
+.danger { background: #fef2f2; color: #dc2626; }
+.warning { background: #fffbeb; color: #d97706; }

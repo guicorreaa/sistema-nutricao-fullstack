@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  my-api:
+    image: nutri-api-imagem
+    build: .
+    ports:
+      - "8080:8080"
+    networks:
+      - network-nutri
+    secrets:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - JWT_SECRET
+      - EMAIL_HOST
+      - EMAIL_PORT
+      - EMAIL_USERNAME
+      - EMAIL_PASSWORD
+      - USER_DOC
+      - PASS_DOC
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+networks:
+  network-nutri:
+    external: true
+
+secrets:
+  POSTGRES_USER:
+    external: true
+  POSTGRES_PASSWORD:
+    external: true
+  JWT_SECRET:
+    external: true
+  EMAIL_HOST:
+    external: true
+  EMAIL_PORT:
+    external: true
+  EMAIL_USERNAME:
+    external: true
+  EMAIL_PASSWORD:
+    external: true
+  USER_DOC:
+    external: true
+  PASS_DOC:
+    external: true
+

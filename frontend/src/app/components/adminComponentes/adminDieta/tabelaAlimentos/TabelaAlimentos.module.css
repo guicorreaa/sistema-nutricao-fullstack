@@ -1,0 +1,209 @@
+.containerTabela {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
+
+/* ------- FILTROS ------- */
+
+.filtrosLinha {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4px 0;
+}
+
+.selectFiltro,
+.selectItensPagina {
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid #b7d8c2;   /* Verde claro */
+  background: #f4fff7;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.selectFiltro:hover,
+.selectItensPagina:hover,
+.campoPesquisaTabelas input:hover {
+  border-color: #7acb8d;         /* Verde médio */
+  background: #ebffee;
+}
+
+.campoPesquisaTabelas input {
+  padding: 4px 6px;
+  font-size: 0.85rem;
+  border: 1px solid #b7d8c2;
+  background: #f4fff7;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.campoPesquisaTabelas button {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  background: #4caf50;     /* Verde principal */
+  color: white;
+  border: none;
+  transition: 0.2s;
+}
+
+.campoPesquisaTabelas button:hover {
+  background: #3d9441;
+}
+
+
+/* ------- PAGINAÇÃO ------- */
+
+.pagination {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #3d9441;
+}
+
+.pagination button:disabled {
+  background: #9c9c9c;
+}
+
+.inputPagina {
+  width: 40px;
+  padding: 3px;
+  text-align: center;
+  font-size: 0.8rem;
+  border: 1px solid #b7d8c2;
+  border-radius: 4px;
+  background: #f4fff7;
+  transition: 0.2s;
+}
+
+.inputPagina:hover {
+  border-color: #7acb8d;
+  background: #ebffee;
+}
+
+
+/* ------- TABELA ------- */
+
+.tabelaClientes {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+
+  /* ⭐ Borda suave e clean ao redor da tabela */
+  border: 1px solid #d0ead8;
+  border-radius: 6px;
+  overflow: hidden;   /* mantém o radius funcionando */
+
+  table-layout: fixed;
+}
+
+/* Defina larguras fixas para colunas conhecidas para ajudar o table-layout: fixed */
+.tabelaClientes th:nth-child(1) { width: 50px; }  /* ID */
+.tabelaClientes th:nth-child(3) { width: 100px; } /* Quantidade */
+
+.tabelaClientes tbody tr {
+  /* 🚀 NOVO: Promove a linha para uma camada da GPU */
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.tabelaClientes th {
+  background: #e1f5e7;       /* Verde bem claro */
+  color: #2e6b3f;            /* Verde escuro */
+  padding: 6px;
+  border-bottom: 2px solid #c8e9d3;
+}
+
+.tabelaClientes td {
+  padding: 4px 6px;
+  border-bottom: 1px solid #e5f3e9;
+}
+
+/* Hover nas linhas */
+.tabelaClientes tbody tr {
+  transition: 0.15s;
+}
+
+.tabelaClientes tbody tr:hover {
+  background: #f1fff4;
+  cursor: pointer;
+}
+
+.linhaSelecionada {
+  background: #d8f5dd !important; /* Verde claro */
+  border-left: 4px solid #4caf50;
+  color: #1e750b;
+}
+
+.tabelaClientes tbody tr:hover:not(.linhaSelecionada) {
+  background: #f1fff4;
+}
+
+.tabelaClientes th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tabelaClientes td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tabelaClientes td:nth-child(3),
+.tabelaClientes td:nth-child(4),
+.tabelaClientes td:nth-child(5),
+.tabelaClientes td:nth-child(6) {
+  text-align: center; /* Números à direita */
+}
+
+/* Quantidade em gramas */
+.inputQuantidade {
+  width: 70px;
+  padding: 4px 6px;
+  border: 1px solid #b7d8c2;
+  border-radius: 4px;
+  background: #f4fff7;
+  font-size: 0.85rem;
+  transition: 0.2s;
+  box-sizing: border-box;
+  display: block;
+  margin: auto; /* centraliza dentro da célula */
+  line-height: 1.2rem;
+
+  transition: none;
+}
+
+.inputQuantidade:hover {
+  border-color: #7acb8d;
+  background: #ebffee;
+}
+
+@media screen and (max-width: 900px) {
+  .tabelaClientes th,
+  .tabelaClientes td {
+    /* padding: 4px; */
+    font-size: 0.75rem;
+  }  
+}

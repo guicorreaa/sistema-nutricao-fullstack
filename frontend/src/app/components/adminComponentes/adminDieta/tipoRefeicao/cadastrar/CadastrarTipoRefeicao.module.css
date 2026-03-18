@@ -1,0 +1,118 @@
+/* Container geral do formulário */
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 16px;
+  }
+  
+  /* Agrupamento Nome + Situação */
+  .campoNomeSituacao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  
+  /* Campo individual */
+  .campo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 230px;
+  }
+  
+  /* Label */
+  .label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+  }
+  
+  /* Inputs */
+  .input,
+  .select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fafafa;
+    transition: border 0.2s, background 0.2s;
+  }
+  
+  /* Hover e focus profissional */
+  .input:hover,
+  .select:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .input:focus,
+  .select:focus {
+    outline: none;
+    border-color: #45a039;
+    background-color: #fff;
+  }
+  
+  /* Container dos botões */
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  /* Botão cancelar */
+  .btnCancel {
+    padding: 10px 22px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #444;
+    transition: background 0.2s;
+  }
+  
+  .btnCancel:hover {
+    background: #e4e4e4;
+  }
+  
+  /* Botão salvar */
+  .btnPrimary {
+    padding: 10px 22px;
+    background: #45a039;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0px 3px 10px #45a039;
+    transition: background 0.2s, transform 0.15s;
+  }
+  
+  .btnPrimary:hover {
+    background: #45a019;
+    transform: translateY(-2px);
+  }
+  
+  /* Mobile bonitão */
+  @media (max-width: 550px) {
+    .campoNomeSituacao {
+      flex-direction: column;
+    }
+    .actions {
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
+    .btnCancel,
+    .btnPrimary {
+      width: 100%;
+    }
+  }
+  

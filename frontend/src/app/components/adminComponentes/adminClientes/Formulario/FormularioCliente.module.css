@@ -1,0 +1,88 @@
+.containerCadastrarCliente {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 50vw;
+  margin: 20px auto;
+}
+
+.cadastrarUuidSexoIdade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem; /* espaço entre os itens */
+}
+
+.uuid,
+.nome,
+.faixaEtaria,
+.sexo,
+.nivelAtividadeFisica,
+.objetivoNutricional {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+}
+
+.uuid label,
+.nome label,
+.faixaEtaria label,
+.sexo label,
+.nivelAtividadeFisica label,
+.objetivoNutricional label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.uuid input,
+.nome input,
+.faixaEtaria input,
+.sexo select,
+.nivelAtividadeFisica input,
+.objetivoNutricional input {
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9fbfc;
+  transition: border-color 0.3s ease;
+}
+
+.btnCadastrar {
+  height: 100%;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  border-radius: 5px;
+  width: 30%;
+}
+
+.btnCadastrar {
+  background-color: #63bd67;
+}
+
+.btnCadastrar:hover {
+  background-color: #45a049;
+}
+
+.btnCarregando {
+  background-color: gray; /* botão cinza */
+  cursor: not-allowed; /* cursor desativado */
+  opacity: 0.7; /* dá uma leve transparência */
+}
+
+.botaoCadastrarFechar {
+  height: 30px;
+  display: flex;
+  padding: 25px;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ativação de Conta | NutriApp</title>
+    <style>
+        table {
+            width: 100% !important;
+            padding: 0;
+            margin: 0;
+        }
+        td {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body style="margin:0; padding:0;">
+
+<table style="background: linear-gradient(180deg, #e8f5e9 0%, #f1f8f4 100%); font-family: Arial, Helvetica, sans-serif;">
+    <tr>
+        <td align="center" style="padding: 50px 20px;">
+
+            <!-- Card -->
+            <table style="
+                width: 520px;
+                background-color: #ffffff;
+                border-radius: 14px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                padding: 32px;
+            ">
+                <tr>
+                    <td>
+                        <h1 style="color:#2e7d32; margin-bottom:5px;">
+                            🌿 Ana Prado Nutricionista
+                        </h1>
+                        <p style="color:#666; font-size:16px; margin-top:0;">
+                            Ativação de conta
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="color:#333; font-size:15px; padding-top:20px;">
+                        <p>Olá,</p>
+
+                        <p>
+                            Recebemos seu cadastro no <strong>Ana Prado Nutricionista</strong>.
+                            Estamos felizes em te acompanhar na sua jornada de saúde 💚
+                        </p>
+
+                        <p>
+                            Para começar, clique no botão abaixo e defina sua senha:
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding:30px 0;">
+                        <a th:href="${link}" style="
+                            display:inline-block;
+                            padding:15px 32px;
+                            background: linear-gradient(135deg, #43a047, #2e7d32);
+                            color:#ffffff;
+                            text-decoration:none;
+                            border-radius:10px;
+                            font-size:16px;
+                            font-weight:bold;
+                            box-shadow: 0 5px 14px rgba(46,125,50,0.35);
+                        ">
+                            Definir minha senha
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="font-size:14px; color:#555;">
+                        <p>⏰ Este link expira em <strong>24 horas</strong>.</p>
+
+                        <p style="margin-top:20px; font-size:12px; color:#888;">
+                            Se você não solicitou este cadastro, pode ignorar este e-mail.
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding-top:30px; text-align:center; font-size:12px; color:#aaa;">
+                        © 2025 Ana Prado • Saúde começa com boas escolhas 🌱
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

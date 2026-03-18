@@ -1,0 +1,323 @@
+.htmlBody {
+  margin: 0;
+  padding: 0;
+
+  background-color: #fff;
+  position: relative;
+}
+
+/* camada só da imagem */
+.htmlBody::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("./images/background_principal.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.10;
+  z-index: -1;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #f4f4f4; */
+  /* background: linear-gradient(to bottom, #e8f5e9, #c8e6c9); */
+    font-family: "Inter", sans-serif;
+  /* min-height: 100vh; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 50vw;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.campos label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  width: 40%;
+}
+
+.campos input {
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9fbfc;
+  transition: border-color 0.3s ease;
+}
+
+.campos input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.informacoesBasicas,
+.circunferencias,
+.calculos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* no máximo 2 colunas */
+  grid-template-rows: auto auto; /* duas linhas */
+  gap: 15px; /* espaço entre os blocos */
+  margin: 10px 0 10px 0;
+}
+
+.mensagem {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.titulo {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #2e7d32;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 2px;
+  font-style: italic;
+}
+
+/* Subtitulo mensagem */
+.subtituloMensagem {
+  color: #2e7d32;
+}
+
+.espacador {
+  margin: 20px 0 20px 0;
+  color: rgba(46, 125, 50, 0.32);
+}
+
+.tituloTabela {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-style: italic;
+  color: #2e7d32;
+}
+
+.ativarMensagem {
+  opacity: 1;
+  transform: translateY(40);
+}
+
+.desativarMensagem {
+  opacity: 0;
+  transform: translateY(-40px); /* sobe um pouquinho */
+}
+
+/* Sucesso */
+.mensagem.sucesso {
+  background-color: #e6f9f0;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+
+/* Erro */
+.mensagem.erro {
+  background-color: #fdeaea;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.iconeLupa {
+  position: absolute;
+  left: 10px;
+  pointer-events: none; /* não atrapalha o clique no input */
+  font-size: 16px;
+  color: #4caf50;
+}
+
+.campoPesquisaTabelas {
+  display: flex;
+  padding: 10px 0 10px 0;
+  position: relative; /* importante para a lupa */
+  align-items: center;
+}
+
+.campoPesquisaTabelas input {
+  font-size: 1rem;
+  border-color: #4caf50;
+  border: 2px solid #4caf50;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  width: 50%;
+  padding-left: 30px; /* espaço pro ícone */
+}
+
+.campoPesquisaTabelas input:focus {
+  border-color: #45a039;
+}
+
+.campoPesquisaTabelas button {
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  min-height: 25px;
+}
+
+.campoPesquisaTabelas button:hover {
+  background-color: #45a039;
+  cursor: pointer;
+}
+
+.campoBotaoSelecionarFechar {
+  height: 30px;
+  display: flex;
+  padding: 25px;
+  justify-content: space-around;
+  margin: 10px 0 0 0;
+}
+
+.botaoFechar {
+  color: #fff;
+  background-color: #842510;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 30%;
+  height: 100%;
+}
+
+.botaoFechar:hover {
+  background-color: #842029;
+  cursor: pointer;
+}
+
+.tituloInformativo {
+  color: #4caf50;
+}
+
+.botaoPadrao {
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+}
+
+.botaoPadrao:hover {
+  background-color: #45a039;
+  cursor: pointer;
+}
+
+.selecionado {
+  background-color: #a5cfa7;
+}
+
+/* /* --------------------------------------------------------------- Tabelas --------------------------------------------------------------- */
+
+.tabelaClientesContainer {
+  max-height: 400px; /* Ajuste conforme altura de 10 linhas */
+  width: 100%;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mantém o estilo da tabela */
+.tabelaClientes {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.tabelaClientes thead {
+  /* Gradiente horizontal ou diagonal */
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
+  position: sticky; /* Cabeçalho fixo */
+  top: 0;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* deixa o texto mais legível */
+}
+
+.tabelaClientes th,
+.tabelaClientes td {
+  padding: 10px 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabelaClientes tbody tr {
+  transition: background-color 0.3s;
+}
+
+.tabelaClientes tbody tr:hover {
+  background-color: #c8e6c9; /* hover suave */
+  cursor: pointer;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+@media (max-width: 425px) {
+  .container {
+    max-width: 80vw;
+  }
+}

@@ -1,0 +1,13 @@
+.botao {
+    transition: 500ms;
+}
+
+.botao button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao:hover {    
+    transform: scale(1.1);
+}

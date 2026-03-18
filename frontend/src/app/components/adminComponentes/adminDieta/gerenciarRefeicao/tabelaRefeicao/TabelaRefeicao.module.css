@@ -1,0 +1,89 @@
+/* ---------------------------- Botão Cadastrar Alimento ---------------------------- */
+.botaoCadastrarAlimento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #95bf8f;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  height: 30px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.botaoCadastrarAlimento:hover {
+  background-color: #6ec362;
+}
+
+/* ---------------------------- Tabela ---------------------------- */
+.tabelaClientes {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  min-width: 600px; /* evita que quebre completamente em telas muito pequenas */
+}
+
+/* Cabeçalho fixo com gradiente */
+.tabelaClientes thead {
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.tabelaClientes th,
+.tabelaClientes td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-break: break-word; /* Quebra texto grande */
+}
+
+.tabelaClientes tbody tr {
+  transition: background-color 0.3s;
+}
+
+.tabelaClientes tbody tr:hover {
+  background-color: #c8e6c9;
+  cursor: pointer;
+}
+
+.tabelaClientes tbody tr.selecionado {
+  background-color: #a5d6a7;
+}
+
+/* ---------------------------- Responsividade ---------------------------- */
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto; /* Permite scroll horizontal em telas pequenas */
+}
+
+/* Em telas menores que 768px, ajustar padding e fonte */
+@media screen and (max-width: 768px) {
+  .tabelaClientes th,
+  .tabelaClientes td {
+    padding: 8px 5px;
+    font-size: 0.9rem;
+  }
+
+  .botaoCadastrarAlimento {
+    width: 90%;
+    height: 28px;
+  }
+}
+
+/* Em telas muito pequenas, reduz colunas e deixa botão maior */
+@media screen and (max-width: 480px) {
+  .tabelaClientes {
+    font-size: 0.8rem;
+  }
+
+  .botaoCadastrarAlimento {
+    width: 100%;
+    height: 30px;
+  }
+}

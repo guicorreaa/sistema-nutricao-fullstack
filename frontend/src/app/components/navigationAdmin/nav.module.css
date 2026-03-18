@@ -1,0 +1,136 @@
+/* NAVBAR */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  /* nav menor */
+  padding: 0 20px;
+  background: linear-gradient(90deg, #2e7d32, #4caf50);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
+  border-radius: 20px;
+  /* nav menor, borda menor */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 100;
+}
+
+/* LOGO */
+.linkLogo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.logo {
+  height: 80%;
+  /* menor logo */
+  max-height: 50px;
+}
+
+/* HAMBURGUER BUTTON */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  /* levemente menor */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 110;
+}
+
+/* MENU GERAL */
+.containerGeral {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
+}
+
+/* LISTA DE LINKS */
+.lista {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.links:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  font-size: 1.1rem;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* MOBILE RESPONSIVO */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .containerGeral {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background: linear-gradient(90deg, #2e7d32, #4caf50);
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    /* fechado */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .mostrarMenu {
+    max-height: 800px;
+    /* maior ao abrir */
+  }
+
+
+  .lista {
+    flex-direction: column;
+    gap: 15px;
+    /* mais espaço entre links */
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    /* mais espaço vertical */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links {
+    width: 90%;
+    /* links maiores no mobile */
+    justify-content: center;
+    font-size: 1.3rem;
+    padding: 15px 0;
+    /* aumentar área clicável */
+  }
+}

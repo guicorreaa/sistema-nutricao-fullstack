@@ -1,0 +1,28 @@
+.campoEscolherFormaCadastro {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5%;
+    padding: 15px 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+  }
+  
+  .campoEscolherFormaCadastro button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .campoEscolherFormaCadastro button:hover {
+    background-color: #45a049;
+  }
+  
+  .subtituloCampoOpcao {
+    margin: 35px 0 0 0;
+  }
+  
