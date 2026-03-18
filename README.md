@@ -59,7 +59,7 @@ Atualmente, o projeto encontra-se em fase de **MVP (Produto Mínimo Viável)**. 
 Para facilitar a análise técnica, a documentação foi dividida em guias especializados:
 
 1. 🐳 **[Infraestrutura e Docker Swarm](./backend/docs/DOCKER_SWARM_GUIDE.md)**: Guia completo de criação de redes, segredos e serviços.
-2. 🗄️ **[Gestão de Dados](./backend/docs)**: Scripts SQL de inicialização e importação massiva via CSV.
+2. 🗄️ **[Gestão de Dados](./backend/scripts/)**: Scripts SQL de inicialização e importação massiva via CSV.
 3. 🛠️ **[Automação de Deploy](./backend/scripts/deploy_commands.sh)**: Script Shell para provisionamento rápido do ambiente.
 
 ---
